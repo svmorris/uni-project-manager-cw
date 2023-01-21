@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html>
+<style>
+:root { --light-accent: #737373; --accent: #000000; --text: #ffffef; --bg0: #ffffff; --bg1: #595959; font-family: 'Courier New'; font-size: 16px; color: var(--text); }
+html, body { margin: 0; padding: 0; height: 100%; width: 100%; background-color: var(--bg0); }
+header { font-size: 2em; padding: .2em; text-align: center; background-color: var(--bg1); }
+.button { margin-left: 1em; margin-top: .3em; margin-bottom: .3em; font-size: 1em; padding-top: .2em; padding-bottom: .2em; padding-left: 1em; padding-right: 1em; border-radius: .3em;  border: solid .1em var(--accent);color: var(--text); background-color: var(--light-accent); }
+.button:hover { color: var(--text); background-color: var(--bg1); }
+.box { margin: auto; margin-top: .5em; display: block; width: 95%; min-height: 1.5em; max-height: 90vh; border-radius: .3em; border: solid .1em var(--accent); background-color: var(--bg1); overflow: scroll; position: absolute; top: 4em; bottom: 1em; left: 1em; right: 1em;}
+.box-inner { padding-top: .5em; padding-bottom: .5em; padding-left: 2em; padding-right: 2em; }
+a { text-decoration: none; color: inherit}
+.dir {display: flex;}
+</style>
+<head>
+<meta charset='utf-8'>
+<title> Project Manager </title>
+</head>
+<body>
+<header>
+Project Manager
+</header>
+<main>
+<div class='box' id='command_output'>
+<pre class='box-inner'>
+./:
+❯ examples.md
+❯ exercise7.md
+❯ Makefile
+❯ notes.md
+❯ README.md
+❯ todo.md
+./bin: <div class='dir'><button class='button create_project' onclick="createProject('./bin')" '>create_project</button><div class='button'><a href='/add_feature/?path=./bin:'>add_feature</a></div><div class='button'><a href='/add_tag/?path=./bin:'>add_tag</a></div></div><div style='clear:both;'></div>❯ pm*
+❯ project-manager#*
+./conf: <div class='dir'><div class='button'><a href='/create_project/?path=./conf:'>create_project</a></div><div class='button'><a href='/add_feature/?path=./conf:'>add_feature</a></div><div class='button'><a href='/add_tag/?path=./conf:'>add_tag</a></div></div><div style='clear:both;'></div>./doc: <div class='dir'><div class='button'><a href='/create_project/?path=./doc:'>create_project</a></div><div class='button'><a href='/add_feature/?path=./doc:'>add_feature</a></div><div class='button'><a href='/add_tag/?path=./doc:'>add_tag</a></div></div><div style='clear:both;'></div>./lib: <div class='dir'><div class='button'><a href='/create_project/?path=./lib:'>create_project</a></div><div class='button'><a href='/add_feature/?path=./lib:'>add_feature</a></div><div class='button'><a href='/add_tag/?path=./lib:'>add_tag</a></div></div><div style='clear:both;'></div>❯ filesystem.o
+❯ libfilesystem.a
+❯ liblinkedlist_stack.a
+❯ liblinkedstack.a
+❯ libproject.a
+❯ libserver.a
+❯ libutil.a
+❯ linkedlist_stack.o
+❯ linkedstack.o
+❯ project.o
+❯ server.o
+❯ util.o
+./src: <div class='dir'><div class='button'><a href='/create_project/?path=./src:'>create_project</a></div><div class='button'><a href='/add_feature/?path=./src:'>add_feature</a></div><div class='button'><a href='/add_tag/?path=./src:'>add_tag</a></div></div><div style='clear:both;'></div>❯ filesystem.c
+❯ filesystem.h
+❯ main.c
+❯ project.c
+❯ project.h
+❯ server.c
+❯ server.h
+❯ util.c
+❯ util.h
+./src/pages: <div class='dir'><div class='button'><a href='/create_project/?path=./src/pages:'>create_project</a></div><div class='button'><a href='/add_feature/?path=./src/pages:'>add_feature</a></div><div class='button'><a href='/add_tag/?path=./src/pages:'>add_tag</a></div></div><div style='clear:both;'></div>❯ index.copy
+❯ index.html
+./tests: <div class='dir'><div class='button'><a href='/create_project/?path=./tests:'>create_project</a></div><div class='button'><a href='/add_feature/?path=./tests:'>add_feature</a></div><div class='button'><a href='/add_tag/?path=./tests:'>add_tag</a></div></div><div style='clear:both;'></div>❯ add_feature.sh*
+❯ add_tag.sh*
+❯ all.sh*
+❯ project_init.sh*
+./tests/feature_test: <div class='dir'><div class='button'><a href='/create_project/?path=./tests/feature_test:'>create_project</a></div><div class='button'><a href='/add_feature/?path=./tests/feature_test:'>add_feature</a></div><div class='button'><a href='/add_tag/?path=./tests/feature_test:'>add_tag</a></div></div><div style='clear:both;'></div>./tests/feature_test/bin: <div class='dir'><div class='button'><a href='/create_project/?path=./tests/feature_test/bin:'>create_project</a></div><div class='button'><a href='/add_feature/?path=./tests/feature_test/bin:'>add_feature</a></div><div class='button'><a href='/add_tag/?path=./tests/feature_test/bin:'>add_tag</a></div></div><div style='clear:both;'></div>./tests/feature_test/conf: <div class='dir'><div class='button'><a href='/create_project/?path=./tests/feature_test/conf:'>create_project</a></div><div class='button'><a href='/add_feature/?path=./tests/feature_test/conf:'>add_feature</a></div><div class='button'><a href='/add_tag/?path=./tests/feature_test/conf:'>add_tag</a></div></div><div style='clear:both;'></div>./tests/feature_test/feature1: <div class='dir'><div class='button'><a href='/create_project/?path=./tests/feature_test/feature1:'>create_project</a></div><div class='button'><a href='/add_feature/?path=./tests/feature_test/feature1:'>add_feature</a></div><div class='button'><a href='/add_tag/?path=./tests/feature_test/feature1:'>add_tag</a></div></div><div style='clear:both;'></div>./tests/feature_test/feature1/bin: <div class='dir'><div class='button'><a href='/create_project/?path=./tests/feature_test/feature1/bin:'>create_project</a></div><div class='button'><a href='/add_feature/?path=./tests/feature_test/feature1/bin:'>add_feature</a></div><div class='button'><a href='/add_tag/?path=./tests/feature_test/feature1/bin:'>add_tag</a></div></div><div style='clear:both;'></div>./tests/feature_test/feature1/conf: <div class='dir'><div class='button'><a href='/create_project/?path=./tests/feature_test/feature1/conf:'>create_project</a></div><div class='button'><a href='/add_feature/?path=./tests/feature_test/feature1/conf:'>add_feature</a></div><div class='button'><a href='/add_tag/?path=./tests/feature_test/feature1/conf:'>add_tag</a></div></div><div style='clear:both;'></div>./tests/feature_test/feature1/lib: <div class='dir'><div class='button'><a href='/create_project/?path=./tests/feature_test/feature1/lib:'>create_project</a></div><div class='button'><a href='/add_feature/?path=./tests/feature_test/feature1/lib:'>add_feature</a></div><div class='button'><a href='/add_tag/?path=./tests/feature_test/feature1/lib:'>add_tag</a></div></div><div style='clear:both;'></div>./tests/feature_test/feature1/src: <div class='dir'><div class='button'><a href='/create_project/?path=./tests/feature_test/feature1/src:'>create_project</a></div><div class='button'><a href='/add_feature/?path=./tests/feature_test/feature1/src:'>add_feature</a></div><div class='button'><a href='/add_tag/?path=./tests/feature_test/feature1/src:'>add_tag</a></div></div><div style='clear:both;'></div>./tests/feature_test/feature1/tests: <div class='dir'><div class='button'><a href='/create_project/?path=./tests/feature_test/feature1/tests:'>create_project</a></div><div class='button'><a href='/add_feature/?path=./tests/feature_test/feature1/tests:'>add_feature</a></div><div class='button'><a href='/add_tag/?path=./tests/feature_test/feature1/tests:'>add_tag</a></div></div><div style='clear:both;'></div>./tests/feature_test/lib: <div class='dir'><div class='button'><a href='/create_project/?path=./tests/feature_test/lib:'>create_project</a></div><div class='button'><a href='/add_feature/?path=./tests/feature_test/lib:'>add_feature</a></div><div class='button'><a href='/add_tag/?path=./tests/feature_test/lib:'>add_tag</a></div></div><div style='clear:both;'></div>./tests/feature_test/src: <div class='dir'><div class='button'><a href='/create_project/?path=./tests/feature_test/src:'>create_project</a></div><div class='button'><a href='/add_feature/?path=./tests/feature_test/src:'>add_feature</a></div><div class='button'><a href='/add_tag/?path=./tests/feature_test/src:'>add_tag</a></div></div><div style='clear:both;'></div>./tests/feature_test/tests: <div class='dir'><div class='button'><a href='/create_project/?path=./tests/feature_test/tests:'>create_project</a></div><div class='button'><a href='/add_feature/?path=./tests/feature_test/tests:'>add_feature</a></div><div class='button'><a href='/add_tag/?path=./tests/feature_test/tests:'>add_tag</a></div></div><div style='clear:both;'></div>./tests/test: <div class='dir'><div class='button'><a href='/create_project/?path=./tests/test:'>create_project</a></div><div class='button'><a href='/add_feature/?path=./tests/test:'>add_feature</a></div><div class='button'><a href='/add_tag/?path=./tests/test:'>add_tag</a></div></div><div style='clear:both;'></div>./tests/test/bin: <div class='dir'><div class='button'><a href='/create_project/?path=./tests/test/bin:'>create_project</a></div><div class='button'><a href='/add_feature/?path=./tests/test/bin:'>add_feature</a></div><div class='button'><a href='/add_tag/?path=./tests/test/bin:'>add_tag</a></div></div><div style='clear:both;'></div>./tests/test/conf: <div class='dir'><div class='button'><a href='/create_project/?path=./tests/test/conf:'>create_project</a></div><div class='button'><a href='/add_feature/?path=./tests/test/conf:'>add_feature</a></div><div class='button'><a href='/add_tag/?path=./tests/test/conf:'>add_tag</a></div></div><div style='clear:both;'></div>./tests/test/lib: <div class='dir'><div class='button'><a href='/create_project/?path=./tests/test/lib:'>create_project</a></div><div class='button'><a href='/add_feature/?path=./tests/test/lib:'>add_feature</a></div><div class='button'><a href='/add_tag/?path=./tests/test/lib:'>add_tag</a></div></div><div style='clear:both;'></div>./tests/test/src: <div class='dir'><div class='button'><a href='/create_project/?path=./tests/test/src:'>create_project</a></div><div class='button'><a href='/add_feature/?path=./tests/test/src:'>add_feature</a></div><div class='button'><a href='/add_tag/?path=./tests/test/src:'>add_tag</a></div></div><div style='clear:both;'></div>./tests/test/tests: <div class='dir'><div class='button'><a href='/create_project/?path=./tests/test/tests:'>create_project</a></div><div class='button'><a href='/add_feature/?path=./tests/test/tests:'>add_feature</a></div><div class='button'><a href='/add_tag/?path=./tests/test/tests:'>add_tag</a></div></div><div style='clear:both;'></div>./tests/test1: <div class='dir'><div class='button'><a href='/create_project/?path=./tests/test1:'>create_project</a></div><div class='button'><a href='/add_feature/?path=./tests/test1:'>add_feature</a></div><div class='button'><a href='/add_tag/?path=./tests/test1:'>add_tag</a></div></div><div style='clear:both;'></div>./tests/test1/bin: <div class='dir'><div class='button'><a href='/create_project/?path=./tests/test1/bin:'>create_project</a></div><div class='button'><a href='/add_feature/?path=./tests/test1/bin:'>add_feature</a></div><div class='button'><a href='/add_tag/?path=./tests/test1/bin:'>add_tag</a></div></div><div style='clear:both;'></div>./tests/test1/conf: <div class='dir'><div class='button'><a href='/create_project/?path=./tests/test1/conf:'>create_project</a></div><div class='button'><a href='/add_feature/?path=./tests/test1/conf:'>add_feature</a></div><div class='button'><a href='/add_tag/?path=./tests/test1/conf:'>add_tag</a></div></div><div style='clear:both;'></div>./tests/test1/lib: <div class='dir'><div class='button'><a href='/create_project/?path=./tests/test1/lib:'>create_project</a></div><div class='button'><a href='/add_feature/?path=./tests/test1/lib:'>add_feature</a></div><div class='button'><a href='/add_tag/?path=./tests/test1/lib:'>add_tag</a></div></div><div style='clear:both;'></div>./tests/test1/src: <div class='dir'><div class='button'><a href='/create_project/?path=./tests/test1/src:'>create_project</a></div><div class='button'><a href='/add_feature/?path=./tests/test1/src:'>add_feature</a></div><div class='button'><a href='/add_tag/?path=./tests/test1/src:'>add_tag</a></div></div><div style='clear:both;'></div>./tests/test1/tests: <div class='dir'><div class='button'><a href='/create_project/?path=./tests/test1/tests:'>create_project</a></div><div class='button'><a href='/add_feature/?path=./tests/test1/tests:'>add_feature</a></div><div class='button'><a href='/add_tag/?path=./tests/test1/tests:'>add_tag</a></div></div><div style='clear:both;'></div>./tests/test_project: <div class='dir'><div class='button'><a href='/create_project/?path=./tests/test_project:'>create_project</a></div><div class='button'><a href='/add_feature/?path=./tests/test_project:'>add_feature</a></div><div class='button'><a href='/add_tag/?path=./tests/test_project:'>add_tag</a></div></div><div style='clear:both;'></div>./tests/test_project/bin: <div class='dir'><div class='button'><a href='/create_project/?path=./tests/test_project/bin:'>create_project</a></div><div class='button'><a href='/add_feature/?path=./tests/test_project/bin:'>add_feature</a></div><div class='button'><a href='/add_tag/?path=./tests/test_project/bin:'>add_tag</a></div></div><div style='clear:both;'></div>./tests/test_project/conf: <div class='dir'><div class='button'><a href='/create_project/?path=./tests/test_project/conf:'>create_project</a></div><div class='button'><a href='/add_feature/?path=./tests/test_project/conf:'>add_feature</a></div><div class='button'><a href='/add_tag/?path=./tests/test_project/conf:'>add_tag</a></div></div><div style='clear:both;'></div>./tests/test_project/lib: <div class='dir'><div class='button'><a href='/create_project/?path=./tests/test_project/lib:'>create_project</a></div><div class='button'><a href='/add_feature/?path=./tests/test_project/lib:'>add_feature</a></div><div class='button'><a href='/add_tag/?path=./tests/test_project/lib:'>add_tag</a></div></div><div style='clear:both;'></div>./tests/test_project/src: <div class='dir'><div class='button'><a href='/create_project/?path=./tests/test_project/src:'>create_project</a></div><div class='button'><a href='/add_feature/?path=./tests/test_project/src:'>add_feature</a></div><div class='button'><a href='/add_tag/?path=./tests/test_project/src:'>add_tag</a></div></div><div style='clear:both;'></div>./tests/test_project/tests: <div class='dir'><div class='button'><a href='/create_project/?path=./tests/test_project/tests:'>create_project</a></div><div class='button'><a href='/add_feature/?path=./tests/test_project/tests:'>add_feature</a></div><div class='button'><a href='/add_tag/?path=./tests/test_project/tests:'>add_tag</a></div></div><div style='clear:both;'></div>
+</pre>
+</div>
+</main>
+</body>
+</html>
+
+
+<script>
+
+// given url string
+    "let url_str = window.location.href;\r\n"\
+    "let url = new URL(url_str);\r\n"\
+    "let search_params = url.searchParams; \r\n"\
+    "let error = search_params.get('error')\r\n"\
+    "if (error != null)\r\n"\
+        "alert(error);\r\n"\
+
+    const createProject = (path) =>
+    {
+        let project_name = prompt(`project name:`);
+            window.location.assign(`/create_project/?path=${path}&name=${project_name}`)
+
+    }
+    const addFeature = (path) =>
+    {
+        let feature_name = prompt(`feature name:`);
+        window.location.assign(`/create_project/?path=${path}&name=${feature_name}`)
+    }
+    const addTag = (path) =>
+    {
+        let tag_name = prompt(`tag name:`);
+        window.location.assign(`/create_project/?path=${path}&name=${tag_name}`)
+    }
+</script>
